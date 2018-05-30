@@ -16,6 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var constraints = {
+    video: true
+  };
+  
 var app = {
     // Application Constructor
     initialize: function() {
@@ -32,14 +37,49 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
+       
         console.log('Received Event: ' + id);
+
+        cordova.plugins.diagnostic.requestCameraAuthorization(
+            function(status){
+                if(status == cordova.plugins.diagnostic.permissionStatus.GRANTED){
+                    // permission granted - use camera
+                    app.startRecording();
+                }else{
+                    // permission denied - inform user
+                }
+            }, function(error){
+                console.error("The following error occurred: "+error);
+            }, false
+        );  
+    },
+    startRecording:function(){
+        var video = document.querySelector('video');
+
+        function handleSuccess(stream) {
+        video.srcObject = stream;
+        }
+
+        function handleError(error) {
+        console.error('getUserMedia error: ', error);
+        }
+
+        navigator.mediaDevices.getUserMedia(constraints).
+        then(handleSuccess).catch(handleError);
+
+        // OLD ANDROID
+       
+
+        /*if (navigator.getUserMedia) {
+            navigator.getUserMedia({audio: true, video: true}, function(stream) {
+                video.src = window.URL.createObjectURL(stream);
+            }, function(e){
+                console.log("Error:" + e);
+            });
+        } else {
+            console.log("No media available");
+        }*/
+
     }
 };
 

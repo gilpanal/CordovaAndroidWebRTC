@@ -1,0 +1,54 @@
+{
+  "_from": "cordova-plugin-k-webrtc-permission",
+  "_id": "cordova-plugin-k-webrtc-permission@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-YeSN/CYFgsteOzdp3CbjgMihqN0=",
+  "_location": "/cordova-plugin-k-webrtc-permission",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-k-webrtc-permission",
+    "name": "cordova-plugin-k-webrtc-permission",
+    "escapedName": "cordova-plugin-k-webrtc-permission",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-k-webrtc-permission/-/cordova-plugin-k-webrtc-permission-1.0.0.tgz",
+  "_shasum": "61e48dfc260582cb5e3b3769dc26e380c8a1a8dd",
+  "_spec": "cordova-plugin-k-webrtc-permission",
+  "_where": "/Users/jose.m.gil.panal/Documents/GitHub/CordovaAndroidWebRTC",
+  "author": {
+    "name": "Krishnendu Sekhar Das"
+  },
+  "bugs": {
+    "url": "https://github.com/krish-dev/cordova-plugin-k-webrtc-permission/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Cordova plugin for grand android required permission",
+  "homepage": "https://github.com/krish-dev/cordova-plugin-k-webrtc-permission#readme",
+  "keywords": [
+    "Cordova",
+    "Plugin",
+    "android",
+    "permission",
+    "webRTC"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cordova-plugin-k-webrtc-permission",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krish-dev/cordova-plugin-k-webrtc-permission.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

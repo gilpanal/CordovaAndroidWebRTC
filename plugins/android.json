@@ -9,6 +9,12 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.gilpanal.webrtc"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.gilpanal.webrtc"
+    },
+    "cordova-plugin-k-webrtc-permission": {
+      "PACKAGE_NAME": "com.gilpanal.webrtc"
     }
   },
   "dependent_plugins": {}
