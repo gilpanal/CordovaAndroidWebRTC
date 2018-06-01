@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -36,11 +36,23 @@
         <title>WebRTC</title>
     </head>
     <body>
-        
-            <h1>Realtime communication with WebRTC</h1>
-            <video autoplay></video>            
+
+            <div id="textRoom" style="display: none;">
+                <div id="textRoomContent">
+                <h3>Text Room</h3>
+                </div>
+                <input id="textRoomInput" >
+                <button onclick="textRoomPress();">Send</button>
+            </div>
+            <video id="selfView" autoplay></video>
+            <div id="remoteViewContainer"></div>
+            <div id="roomIDContainer">
+                <input id="roomID" value="abc">
+                <button onclick="press();">Join/Create room</button>
+            </div>         
        
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/socket.io.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
