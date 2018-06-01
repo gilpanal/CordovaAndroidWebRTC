@@ -246,37 +246,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
        
-        console.log('Received Event: ' + id);
-
-      
-    },
-    startRecording:function(){
-        var video = document.querySelector('video');
-
-        function handleSuccess(stream) {
-        video.srcObject = stream;
-        }
-
-        function handleError(error) {
-        console.error('getUserMedia error: ', error);
-        }
-
-        navigator.mediaDevices.getUserMedia(constraints).
-        then(handleSuccess).catch(handleError);
-
-        // OLD ANDROID
-       
-
-        /*if (navigator.getUserMedia) {
-            navigator.getUserMedia({audio: true, video: true}, function(stream) {
-                video.src = window.URL.createObjectURL(stream);
-            }, function(e){
-                console.log("Error:" + e);
-            });
-        } else {
-            console.log("No media available");
-        }*/
-
+        console.log('Received Event: ' + id);     
     }
 };
 app.initialize();

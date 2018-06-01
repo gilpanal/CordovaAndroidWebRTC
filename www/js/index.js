@@ -246,23 +246,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
        
-        console.log('Received Event: ' + id);
-
-      
-    },
-    startRecording:function(){
-        var video = document.querySelector('video');
-
-        function handleSuccess(stream) {
-        video.srcObject = stream;
-        }
-
-        function handleError(error) {
-        console.error('getUserMedia error: ', error);
-        }
-
-        navigator.mediaDevices.getUserMedia(constraints).
-        then(handleSuccess).catch(handleError);
+        console.log('Received Event: ' + id);     
     }
 };
 app.initialize();
