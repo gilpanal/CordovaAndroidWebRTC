@@ -263,20 +263,6 @@ var app = {
 
         navigator.mediaDevices.getUserMedia(constraints).
         then(handleSuccess).catch(handleError);
-
-        // OLD ANDROID
-       
-
-        /*if (navigator.getUserMedia) {
-            navigator.getUserMedia({audio: true, video: true}, function(stream) {
-                video.src = window.URL.createObjectURL(stream);
-            }, function(e){
-                console.log("Error:" + e);
-            });
-        } else {
-            console.log("No media available");
-        }*/
-
     }
 };
 app.initialize();
